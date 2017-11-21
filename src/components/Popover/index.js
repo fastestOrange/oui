@@ -12,21 +12,33 @@ import PropTypes from 'prop-types';
  */
 const Popover = ({
   children,
+  padding,
   testSection,
   title,
 }) => {
-  let classes = classNames({
+  const popOverClasses = classNames({
     'oui-pop--over': true,
     'highlight-react--oui': localStorage.getItem('show_ouireact') === 'true',
   });
 
+  let popOverContentClasses = classNames({
+    'oui-pop--over__content': true,
+  });
+
+  if (padding) {
+    popOverContentClasses = classNames({
+      'oui-pop--over__content': true,
+      [padding]: true,
+    });
+  }
+
   return (
     <div
       data-oui-component={ true }
-      className={ classes }
+      className={ popOverClasses }
       style={{ display: 'block', opacity: 1, position: 'initial' }}
       data-test-section={ testSection }>
-      <div className="oui-pop--over__content">
+      <div className={popOverContentClasses}>
         { title && (
           <div className="oui-pop--over__title">{ title }</div>
         ) }
@@ -39,10 +51,16 @@ const Popover = ({
 Popover.propTypes = {
   /** Content that appears within the popover body */
   children: PropTypes.node.isRequired,
+  /** Padding class for the popover */
+  padding: PropTypes.oneOf([PropTypes.bool, 'soft-half', 'hard', 'soft-double']),
   /** Hook for automated JavaScript tests */
   testSection: PropTypes.string,
   /** Text describing the popover contents */
   title: PropTypes.string,
+};
+
+Popover.defaultProps = {
+  padding: false,
 };
 
 export default Popover;
