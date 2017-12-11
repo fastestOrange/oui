@@ -43,6 +43,7 @@ exports[`components/OverlayWrapper snapshots & others should render a Popover co
     >
       <TestPopover>
         <Popover
+          padding="default"
           title="Lorem ipsum dolor sit amet"
         >
           <div
