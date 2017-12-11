@@ -6,6 +6,7 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 
 ## Unreleased
 - [Feature] - Allow Attention React Oui Component To Accept Other React Oui Components As Children (#737)
+- [Feature] - Add padding prop to Popover component to allow for hard/flush component padding and margins (#862)
 
 ## 28.1.8 - 2017-12-01
 - [Patch] - Remove old oui-icons from React bundle (#859)
