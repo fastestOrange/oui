@@ -39,4 +39,36 @@ describe('components/Popover', () => {
     );
     expect(component.is('[data-test-section="foo"]')).toBe(true);
   });
+
+  it('should not modify classes when "default" is provided for padding prop', () => {
+    const component = shallow(
+      <Popover padding="default">Heyo!</Popover>
+    );
+    var popOverContainerClassName = component.find('div.oui-pop--over__content').get(0).props.className;
+    expect(popOverContainerClassName).toBe('oui-pop--over__content');
+  });
+
+  it('should not modify classes when nothing is provided for padding prop', () => {
+    const component = shallow(
+      <Popover>Heyo!</Popover>
+    );
+    var popOverContainerClassName = component.find('div.oui-pop--over__content').get(0).props.className;
+    expect(popOverContainerClassName).toBe('oui-pop--over__content');
+  });
+
+  it('should not modify classes when an invalid class is provided for padding prop', () => {
+    const component = shallow(
+      <Popover padding="foobar">Heyo!</Popover>
+    );
+    var popOverContainerClassName = component.find('div.oui-pop--over__content').get(0).props.className;
+    expect(popOverContainerClassName).toBe('oui-pop--over__content');
+  });
+
+  it('should modify classes when a valid class is provided for padding prop', () => {
+    const component = shallow(
+      <Popover padding="hard">Heyo!</Popover>
+    );
+    var popOverContainerClassName = component.find('div.oui-pop--over__content').get(0).props.className;
+    expect(popOverContainerClassName).toContain('hard');
+  });
 });
