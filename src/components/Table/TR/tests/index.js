@@ -19,7 +19,7 @@ describe('components/Table/TR', () => {
   });
 
   it('should render without a border if noBorder is passed', () => {
-    const component = shallow(<TR noBorder="true" testSection="goose"></TR>);
+    const component = shallow(<TR noBorder={ true } testSection="goose"></TR>);
     expect(component.hasClass('no-border')).toBe(true);
   });
 });

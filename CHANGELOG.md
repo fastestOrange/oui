@@ -5,8 +5,12 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
-- [Feature] - Allow Attention React Oui Component To Accept Other React Oui Components As Children (#737)
 - [Feature] - Add padding prop to Popover component to allow for hard/flush component padding and margins (#862)
+
+## 28.2.0 - 2017-12-15
+- [Feature] - Add TR props for backgroundColor (#865) and borderStyle (#866)
+- [Feature] - Add .scrollbars--visible helper to show overflow container scroll bars (#863)
+- [Feature] - Allow Attention React OUI component to accept other React OUI components as children (#737)
 
 ## 28.1.8 - 2017-12-01
 - [Patch] - Remove old oui-icons from React bundle (#859)
@@ -22,11 +26,11 @@ This file is similar to the format suggested by [Keep a CHANGELOG](https://githu
 - this release was skipped (used to test)
 
 ## 28.1.3 - 2017-11-30
-- [Patch] - Fix Make it so that only last-child's in the .oui-disclose_content have a padding-bottom of 20px and NOT .#{FRAMEWORK}-disclose_content
+- [Patch] - Fix Make it so that only last-children in the .oui-disclose_content have a padding-bottom of 20px and NOT .#{FRAMEWORK}-disclose_content
 - [Patch] - Fix eslint errors where props are using functions
 
 ## 28.1.2 - 2017-11-30
-- this release was skipped
+- This release was skipped
 
 ## 28.1.1 - 2017-11-01
 - [Patch] Add default type to button on Dropdown component (#846)

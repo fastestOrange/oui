@@ -50,6 +50,29 @@ stories
       </Table.TBody>
     </Table>
   </div>)))
+  .add('custom tr borders', withInfo()(() => (<div>
+    <Table>
+      <Table.THead>
+        <Table.TR>
+          <Table.TH> Experiment </Table.TH>
+          <Table.TH> Conversion Rate </Table.TH>
+          <Table.TH> Status </Table.TH>
+        </Table.TR>
+      </Table.THead>
+      <Table.TBody>
+        <Table.TR borderStyle="ends" backgroundColor="faint">
+          <Table.TD> Header CTA </Table.TD>
+          <Table.TD> 12% </Table.TD>
+          <Table.TD> Paused </Table.TD>
+        </Table.TR>
+        <Table.TR>
+          <Table.TD> Shorter Contact Form </Table.TD>
+          <Table.TD> 4% </Table.TD>
+          <Table.TD> Draft </Table.TD>
+        </Table.TR>
+      </Table.TBody>
+    </Table>
+  </div>)))
   .add('loose & rule style', withInfo()(() => (<div>
     <Table density="loose" style="rule" tableLayoutAlgorithm="fixed">
       <Table.THead>
@@ -157,4 +180,3 @@ stories
       </Table.TBody>
     </Table>
   </div>)));
-

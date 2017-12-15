@@ -59,7 +59,7 @@ Card.propTypes = {
   /** method to invoke when a close element is clicked */
   onClose: PropTypes.func,
   /** Display a subtle shadow around card. */
-  shadow: PropTypes.boolean,
+  shadow: PropTypes.bool,
   /** For automated testing only. */
   testSection: PropTypes.string,
   /** What is the card title */

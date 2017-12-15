@@ -1,0 +1,26 @@
+////
+/// Scrollbars
+/// @description Helper to always show visible scroll bars on container elements with overflow.
+///
+/// @example[html] Adds always visible sroll bars.
+///   <div class="scrollbars--visible">
+///     ...
+///   </div>
+////
+.scrollbars--visible {
+  overflow-y: scroll;
+}
+.scrollbars--visible::-webkit-scrollbar,
+.scrollbars--visible::scrollbar {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 7px;
+  background-color: rgba(0, 0, 0, .04);
+}
+.scrollbars--visible::-webkit-scrollbar-thumb,
+.scrollbars--visible::scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+          box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+}

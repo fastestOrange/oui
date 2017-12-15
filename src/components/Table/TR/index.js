@@ -5,12 +5,16 @@ import PropTypes from 'prop-types';
 const TR = ({
   isActive,
   noBorder,
+  borderStyle,
+  backgroundColor,
   testSection,
   children,
 }) => {
   let classes = classNames({
     'oui-table-row--active': isActive,
     'no-border': noBorder,
+    [`border--${borderStyle}`]: borderStyle,
+    [`background--${backgroundColor}`]: backgroundColor,
   });
   return (
     <tr
@@ -22,6 +26,10 @@ const TR = ({
 };
 
 TR.propTypes = {
+  /** Background color for each row */
+  backgroundColor: PropTypes.oneOf(['faint', 'light']),
+  /** Border style for each row */
+  borderStyle: PropTypes.oneOf(['bottom', 'top', 'sides', 'ends', 'none']),
   /** Expects a `Table.TD` or `Table.TH` component */
   children: PropTypes.node,
   /** If true, add active class */
