@@ -93,7 +93,7 @@ class Dropdown extends React.Component {
             <div className='flex'>
               <div className='flex--1 truncate'>{ buttonContent }</div>
               {
-                !!arrowIcon && (
+                !!arrowIcon && arrowIcon !== 'none' && (
                   <div className='text--right'><span className={ iconClass }></span></div>
                 )
               }
@@ -122,11 +122,16 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  /** Arrow icon direction. Defaults to false which hides the arrow - true uses dropdown arrow  */
+  /** Arrow icon direction.
+    * - Defaults to 'none' which hides the arrow -
+    * - false also hides
+    * - true uses down arrow
+    */
   arrowIcon: PropTypes.oneOf([
     'down',
     false,
     'left',
+    'none',
     'right',
     true,
     'up',
@@ -173,7 +178,7 @@ Dropdown.propTypes = {
 };
 
 Dropdown.defaultProps = {
-  arrowIcon: false,
+  arrowIcon: 'none',
 };
 
 export default Dropdown;
