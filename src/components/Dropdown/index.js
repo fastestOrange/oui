@@ -45,6 +45,7 @@ class Dropdown extends React.Component {
 
   render() {
     const {
+      arrowIcon,
       buttonContent,
       children,
       isDisabled = false,
@@ -67,6 +68,16 @@ class Dropdown extends React.Component {
       { ['oui-button--full soft--left text--left']: fullWidth }
     );
 
+    const iconClass = classNames(
+      'push-half--left',
+      {
+        ['oui-arrow-inline--down']: arrowIcon === 'down',
+        ['oui-arrow-inline--left']: arrowIcon === 'left',
+        ['oui-arrow-inline--right']: arrowIcon === 'right',
+        ['oui-arrow-inline--up']: arrowIcon === 'up',
+      }
+    );
+
     return (
       <Manager
         data-ui-component={ true }
@@ -81,6 +92,11 @@ class Dropdown extends React.Component {
             onBlur={ this.handleOnBlur }>
             <div className='flex'>
               <div className='flex--1 truncate'>{ buttonContent }</div>
+              {
+                !!arrowIcon && (
+                  <div className='text--right'><span className={ iconClass }></span></div>
+                )
+              }
             </div>
           </button>
         </Target>
@@ -106,6 +122,14 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
+  /** Arrow icon direction */
+  arrowIcon: PropTypes.oneOf([
+    false,
+    'down',
+    'left',
+    'right',
+    'up',
+  ]),
   /** Button text, can be a string or element. */
   buttonContent: PropTypes.oneOfType([
     PropTypes.string,
@@ -145,6 +169,10 @@ Dropdown.propTypes = {
   ]),
   /** Override default dropdown menu z-index. */
   zIndex: PropTypes.number,
+};
+
+Dropdown.defaultProps = {
+  arrowIcon: false,
 };
 
 export default Dropdown;
