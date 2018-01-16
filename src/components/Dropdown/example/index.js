@@ -6,6 +6,7 @@ export default [
   {
     examples: [
       <Dropdown
+        arrowIcon={ true }
         isDisabled={ false }
         isOpen={ true }
         fullWidth={ false }
