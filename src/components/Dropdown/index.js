@@ -71,7 +71,7 @@ class Dropdown extends React.Component {
     const iconClass = classNames(
       'push-half--left',
       {
-        ['oui-arrow-inline--down']: arrowIcon === 'down',
+        ['oui-arrow-inline--down']: arrowIcon === true || arrowIcon === 'down',
         ['oui-arrow-inline--left']: arrowIcon === 'left',
         ['oui-arrow-inline--right']: arrowIcon === 'right',
         ['oui-arrow-inline--up']: arrowIcon === 'up',
@@ -122,12 +122,13 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  /** Arrow icon direction */
+  /** Arrow icon direction. Defaults to false which hides the arrow - true uses dropdown arrow  */
   arrowIcon: PropTypes.oneOf([
-    false,
     'down',
+    false,
     'left',
     'right',
+    true,
     'up',
   ]),
   /** Button text, can be a string or element. */

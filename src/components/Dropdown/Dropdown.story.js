@@ -30,6 +30,7 @@ stories
 stories.add('with BlockList elements', withInfo()(() => {
   return (
     <Dropdown
+      arrowIcon={true}
       isDisabled={ boolean('isDisabled', false) }
       fullWidth={ boolean('fullWidth', false) }
       style={ select('style', {
