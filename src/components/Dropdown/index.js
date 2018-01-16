@@ -122,10 +122,10 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  /** Arrow icon direction.
-    * - Defaults to 'none' which hides the arrow -
-    * - false also hides
-    * - true uses down arrow
+  /** Arrow icon direction:
+    * - Defaults to 'none', which hides the arrow
+    * - passing a prop value of false also hides the arrow
+    * - passing a prop value of true uses down arrow
     */
   arrowIcon: PropTypes.oneOf([
     'down',
