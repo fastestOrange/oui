@@ -10,83 +10,72 @@ import PropTypes from 'prop-types';
  * @returns {ReactElement}
  */
 
-class TextField extends React.Component {
+const TextField = ({
+  note = false,
+  defaultValue,
+  displayError = false,
+  isDisabled = false,
+  isFilter = false,
+  isOptional,
+  isReadOnly,
+  onBlur,
+  isRequired,
+  label,
+  min,
+  max,
+  onChange,
+  onInput,
+  onKeyDown,
+  onFocus,
+  placeholder,
+  testSection,
+  type,
+  value,
+}) => {
 
-  renderInput({
-    note,
-    defaultValue,
-    displayError = false,
-    isDisabled = false,
-    isFilter = false,
-    isOptional,
-    isReadOnly,
-    onBlur,
-    isRequired,
-    label,
-    min,
-    max,
-    onChange,
-    onInput,
-    onKeyDown,
-    onFocus,
-    placeholder,
-    testSection,
-    type,
-    value,
-  }) {
-    const noteLabel = note ? <div className="oui-form-note">{ note }</div> : null;
-    const labelElement = label ?
-      (<Label
-        displayError={ displayError }
-        isRequired={ isRequired }
-        isOptional={ isOptional }>
-        { label }
-      </Label>)
-      : null;
+  let wrapperClasses = classnames(
+    {'oui-form-bad-news': displayError}
+  );
 
-    let wrapperClasses = classnames(
-      {'oui-form-bad-news': displayError}
-    );
+  let classes = classnames(
+    'oui-text-input', {'oui-text-input--search': isFilter}
+  );
 
-    let classes = classnames(
-      'oui-text-input', {'oui-text-input--search': isFilter}
-    );
-
-    return (
-      /* eslint-disable react/jsx-no-bind */
-      <div
-        data-oui-component={ true }
-        className={ wrapperClasses ? 'oui-form-bad-news' : null }>
-        { labelElement }
-        <input
-          className={ classes }
-          ref={ (c) => { this._input = c; } }
-          type={ type }
-          value={ value }
-          defaultValue={ defaultValue }
-          placeholder={ placeholder }
-          required={ isRequired }
-          readOnly={ isReadOnly }
-          disabled={ isDisabled }
-          onInput={ onInput }
-          onChange={ onChange }
-          onBlur={ onBlur }
-          onKeyDown={ onKeyDown }
-          onFocus={ onFocus }
-          min={ min }
-          max={ max }
-          data-test-section={ testSection }
-        />
-        { noteLabel }
-      </div>
-      /* eslint-enable */
-    );
-  }
-
-  render() {
-    return this.renderInput(this.props);
-  }
-}
+  return (
+    /* eslint-disable react/jsx-no-bind */
+    <div
+      data-oui-component={ true }
+      className={ wrapperClasses ? 'oui-form-bad-news' : null }>
+      { label &&
+        <Label
+          displayError={ displayError }
+          isRequired={ isRequired }
+          isOptional={ isOptional }>
+          { label }
+        </Label>
+      }
+      <input
+        className={ classes }
+        type={ type }
+        value={ value }
+        defaultValue={ defaultValue }
+        placeholder={ placeholder }
+        required={ isRequired }
+        readOnly={ isReadOnly }
+        disabled={ isDisabled }
+        onInput={ onInput }
+        onChange={ onChange }
+        onBlur={ onBlur }
+        onKeyDown={ onKeyDown }
+        onFocus={ onFocus }
+        min={ min }
+        max={ max }
+        data-test-section={ testSection }
+      />
+      { note && <div className="oui-form-note">{ note }</div> }
+    </div>
+  );
+};
 
 TextField.propTypes = {
   /** The default value of the input used on initial render */

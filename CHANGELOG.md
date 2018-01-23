@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 This file is similar to the format suggested by [Keep a CHANGELOG](https://github.com/olivierlacan/keep-a-changelog).
 
 ## Unreleased
+- [Feature] Add toggle/show/hide higher-order component; new utility library called recompose; convert components to stateless/dumb components.
+
+## 28.5.1 - 2018-01-17
+- [Patch] Maintenance update for Storybook
 
 ## 28.5.0 - 2018-01-10
 - [Patch] - Update Input Component so that when `isReadOnly` is true, don't show a blue outline on focus. (#883)

@@ -14,3 +14,5 @@ dist/docs
 dist/js/components/**/*.story.js
 .storybook
 storybook-static
+
+storybook

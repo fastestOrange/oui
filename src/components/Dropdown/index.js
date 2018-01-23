@@ -2,31 +2,34 @@ import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { Manager, Popper, Target } from 'react-popper';
+import { withToggle } from '../../utils/recompose-utils';
 
-class Dropdown extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-      overChildren: false,
-    };
-    this.handleToggle = this.handleToggle.bind(this);
-    this.handleOnBlur = this.handleOnBlur.bind(this);
-    this.handleMouseOverChildren = this.handleMouseOverChildren.bind(this);
-    this.handleMouseLeavingChildren = this.handleMouseLeavingChildren.bind(this);
-  }
+const Dropdown = withToggle(({
+  buttonContent,
+  children,
+  hide,
+  isDisabled = false,
+  isOpen,
+  fullWidth,
+  placement = 'bottom-start',
+  show,
+  style,
+  testSection,
+  width = 200,
+  zIndex = 999,
+  toggle,
+}) => {
 
-  handleMouseOverChildren() {
-    this.setState({
-      overChildren: true,
-    });
-  }
+  const groupClass = classNames(
+    'oui-dropdown-group',
+    { ['width--1-1']: fullWidth }
+  );
 
-  handleMouseLeavingChildren() {
-    this.setState({
-      overChildren: false,
-    });
-  }
+  const buttonClass = classNames(
+    'oui-button',
+    { [`oui-button--${style}`]: style },
+    { ['oui-button--full soft--left text--left']: fullWidth }
+  );
 
   handleOnBlur() {
     if (!this.state.overChildren) {

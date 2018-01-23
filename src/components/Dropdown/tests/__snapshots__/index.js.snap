@@ -1,241 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components/Dropdown should highlight button class when style equals highlight 1`] = `
-<Manager
-  className="oui-dropdown-group"
-  data-ui-component={true}
-  tag="div"
+<withHandlers(Component)
+  buttonContent="Dropdown"
+  icon={true}
+  isOpen={false}
+  style="highlight"
+  toggle={[Function]}
 >
-  <Target>
-    <button
-      className="oui-button oui-button--highlight"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      type="button"
+  <ul>
+    <li
+      key="0"
     >
-      <div
-        className="flex"
-      >
-        <div
-          className="flex--1 truncate"
-        >
-          Dropdown
-        </div>
-      </div>
-    </button>
-  </Target>
-  <Popper
-    className="oui-dropdown-children"
-    component="div"
-    eventsEnabled={true}
-    modifiers={Object {}}
-    onClick={[Function]}
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-    placement="bottom-start"
-    style={
-      Object {
-        "boxShadow": "0 2px 3px rgba(0,0,0,.1)",
-        "marginBottom": 2,
-        "marginTop": 2,
-        "position": "absolute",
-        "width": 200,
-        "zIndex": 999,
-      }
-    }
-  />
-</Manager>
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(Component)>
 `;
 
 exports[`components/Dropdown should not render children when isDisabled is true 1`] = `
-<Manager
-  className="oui-dropdown-group"
-  data-ui-component={true}
-  tag="div"
+<withHandlers(Component)
+  buttonContent="Dropdown"
+  icon={true}
+  idDisabled={true}
+  isOpen={false}
+  toggle={[Function]}
 >
-  <Target>
-    <button
-      className="oui-button"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      type="button"
+  <ul>
+    <li
+      key="0"
     >
-      <div
-        className="flex"
-      >
-        <div
-          className="flex--1 truncate"
-        >
-          Dropdown
-        </div>
-      </div>
-    </button>
-  </Target>
-  <Popper
-    className="oui-dropdown-children"
-    component="div"
-    eventsEnabled={true}
-    modifiers={Object {}}
-    onClick={[Function]}
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-    placement="bottom-start"
-    style={
-      Object {
-        "boxShadow": "0 2px 3px rgba(0,0,0,.1)",
-        "marginBottom": 2,
-        "marginTop": 2,
-        "position": "absolute",
-        "width": 200,
-        "zIndex": 999,
-      }
-    }
-  />
-</Manager>
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(Component)>
 `;
 
 exports[`components/Dropdown should not use .oui-arrow-inline--down when icon isEqual to triangle 1`] = `
-<Manager
-  className="oui-dropdown-group"
-  data-ui-component={true}
-  tag="div"
+<withHandlers(Component)
+  buttonContent="Dropdown"
+  icon={true}
+  isOpen={false}
+  toggle={[Function]}
 >
-  <Target>
-    <button
-      className="oui-button"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      type="button"
+  <ul>
+    <li
+      key="0"
     >
-      <div
-        className="flex"
-      >
-        <div
-          className="flex--1 truncate"
-        >
-          Dropdown
-        </div>
-      </div>
-    </button>
-  </Target>
-  <Popper
-    className="oui-dropdown-children"
-    component="div"
-    eventsEnabled={true}
-    modifiers={Object {}}
-    onClick={[Function]}
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-    placement="bottom-start"
-    style={
-      Object {
-        "boxShadow": "0 2px 3px rgba(0,0,0,.1)",
-        "marginBottom": 2,
-        "marginTop": 2,
-        "position": "absolute",
-        "width": 200,
-        "zIndex": 999,
-      }
-    }
-  />
-</Manager>
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(Component)>
 `;
 
 exports[`components/Dropdown should render children when isOpen is true 1`] = `
-<Manager
-  className="oui-dropdown-group"
-  data-ui-component={true}
-  tag="div"
+<withHandlers(Component)
+  buttonContent="Dropdown"
+  icon={true}
+  isOpen={false}
+  toggle={[Function]}
 >
-  <Target>
-    <button
-      className="oui-button"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      type="button"
+  <ul>
+    <li
+      key="0"
     >
-      <div
-        className="flex"
-      >
-        <div
-          className="flex--1 truncate"
-        >
-          Dropdown
-        </div>
-      </div>
-    </button>
-  </Target>
-  <Popper
-    className="oui-dropdown-children"
-    component="div"
-    eventsEnabled={true}
-    modifiers={Object {}}
-    onClick={[Function]}
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-    placement="bottom-start"
-    style={
-      Object {
-        "boxShadow": "0 2px 3px rgba(0,0,0,.1)",
-        "marginBottom": 2,
-        "marginTop": 2,
-        "position": "absolute",
-        "width": 200,
-        "zIndex": 999,
-      }
-    }
-  />
-</Manager>
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(Component)>
 `;
 
 exports[`components/Dropdown should use oui-button--full class when fullWidth is true 1`] = `
-<Manager
-  className="oui-dropdown-group width--1-1"
-  data-ui-component={true}
-  tag="div"
+<withHandlers(Component)
+  buttonContent="Dropdown"
+  fullWidth={true}
+  icon={true}
+  isOpen={false}
+  toggle={[Function]}
 >
-  <Target>
-    <button
-      className="oui-button oui-button--full soft--left text--left"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      type="button"
+  <ul>
+    <li
+      key="0"
     >
-      <div
-        className="flex"
-      >
-        <div
-          className="flex--1 truncate"
-        >
-          Dropdown
-        </div>
-      </div>
-    </button>
-  </Target>
-  <Popper
-    className="oui-dropdown-children"
-    component="div"
-    eventsEnabled={true}
-    modifiers={Object {}}
-    onClick={[Function]}
-    onMouseLeave={[Function]}
-    onMouseOver={[Function]}
-    placement="bottom-start"
-    style={
-      Object {
-        "boxShadow": "0 2px 3px rgba(0,0,0,.1)",
-        "marginBottom": 2,
-        "marginTop": 2,
-        "position": "absolute",
-        "width": 200,
-        "zIndex": 999,
-      }
-    }
-  />
-</Manager>
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(Component)>
 `;

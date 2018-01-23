@@ -1,29 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Disclose Component  renders correctly 1`] = `
-<div
-  className="oui-disclose"
-  style={
-    Object {
-      "marginTop": "-1px",
-    }
-  }
+<withHandlers(Component)
+  isOpen={false}
+  title="Some title"
+  toggle={[Function]}
 >
-  <a
-    className="oui-disclose__link link--dark soft-half flush"
-    onClick={[Function]}
-  >
-    <div
-      className="oui-disclose__arrow"
-    >
-      <span
-        className="oui-disclose__symbol push-half--right"
-      />
-      Some title
-    </div>
-  </a>
-  <div
-    className="oui-disclose__content"
-  />
-</div>
+   
+  <div>
+    disclose this
+  </div>
+   
+</withHandlers(Component)>
 `;

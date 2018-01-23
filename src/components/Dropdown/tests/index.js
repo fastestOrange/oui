@@ -103,58 +103,5 @@ describe('components/Dropdown', () => {
     );
     expect(shallowToJson(component)).toMatchSnapshot();
   });
-
-  it('should change state to `isOpen=true` when click on button', () => {
-    const dropdown = shallow(
-      <Dropdown buttonContent='Dropdown'>
-        <ul></ul>
-      </Dropdown>
-    );
-    dropdown.find('.oui-button').simulate('click');
-    expect(dropdown.state().isOpen).toBe(true);
-  });
-
-  it('should change state to `isOpen=false` when click on button twice', () => {
-    const dropdown = shallow(
-      <Dropdown buttonContent='Dropdown'>
-        <ul></ul>
-      </Dropdown>
-    );
-    dropdown.find('.oui-button').simulate('click');
-    dropdown.find('.oui-button').simulate('click');
-    expect(dropdown.state().isOpen).toBe(false);
-  });
-
-  it('should change/keep state to `isOpen=false` when click onBlur', () => {
-    const dropdown = shallow(
-      <Dropdown buttonContent='Dropdown'>
-        <ul></ul>
-      </Dropdown>
-    );
-    dropdown.find('.oui-button').simulate('click');
-    dropdown.find('.oui-button').simulate('blur');
-    expect(dropdown.state().isOpen).toBe(false);
-  });
-
-  it('should change state to `overChildren=true` when mouseover', () => {
-    const dropdown = shallow(
-      <Dropdown buttonContent='Dropdown'>
-        <ul></ul>
-      </Dropdown>
-    );
-    dropdown.find('.oui-dropdown-children').simulate('mouseover');
-    expect(dropdown.state().overChildren).toBe(true);
-  });
-
-  it('should change state to `overChildren=false` when mouseleave', () => {
-    const dropdown = shallow(
-      <Dropdown buttonContent='Dropdown'>
-        <ul></ul>
-      </Dropdown>
-    );
-    dropdown.find('.oui-dropdown-children').simulate('mouseleave');
-    expect(dropdown.state().overChildren).toBe(false);
-  });
-
 });
 

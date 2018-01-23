@@ -23,7 +23,6 @@ stories
         defaultValue={ text('defaultValue', 'some default value') }
         displayError={ boolean('displayError', false) }
         isFilter={ boolean('isFilter', false) }
-        isDropdown={ boolean('isDropdown', true) }
         isOptional={ boolean('isOptional', false) }
         isRequired={ boolean('isRequired', false) }
         label={ text('Label', '') }
