@@ -56,6 +56,11 @@ const Dropdown = withToggle(({
           onBlur={ hide }>
           <div className='flex'>
             <div className='flex--1 truncate'>{ buttonContent }</div>
+            {
+              !!arrowIcon && arrowIcon !== 'none' && (
+                <div className='text--right'><span className={ iconClass }></span></div>
+              )
+            }
           </div>
         </button>
       </Target>
@@ -74,7 +79,7 @@ const Dropdown = withToggle(({
         { isOpen && !isDisabled && children }
       </Popper>
     </Manager>
-  )
+  );
 });
 
 Dropdown.propTypes = {
