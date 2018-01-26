@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import { storiesOf } from '@storybook/react';
-import { withKnobs, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, boolean, number, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { withInfo } from '@storybook/addon-info';
 
@@ -28,79 +28,79 @@ stories
   ));
 
 
-stories.add('with BlockList elements', withInfo()(() => {
-  return (
-    <Dropdown
-      arrowIcon={ select('arrowIcon', {
-        'down': 'down',
-        'left': 'left',
-        'none': 'none',
-        'right': 'right',
-        'up': 'up',
-      }, 'down') }
-      isDisabled={ boolean('isDisabled', false) }
-      fullWidth={ boolean('fullWidth', false) }
-      style={ select('style', {
-        default: 'default',
-        highlight: 'highlight',
-        danger: 'danger',
-        'danger-outline': 'danger-outline',
-        outline: 'outline',
-        underline: 'underline'}, '') }
-      buttonContent='Dropdown'
-      width={ number('width', 300) }>
-      <BlockList>
-        {
-          data.map((item, index) => {
-            return (
-              <BlockList.Category header={ item.header } key={ index }>
-                <BlockList.Item onClick={ action('click on complex item') }>
-                  <div className="flex flex-align--center">
-                    <div className="flex--1">
-                      <div>{ item.title }</div>
-                      <div className="muted micro">{ item.description }</div>
-                    </div>
-                  </div>
-                </BlockList.Item>
-              </BlockList.Category>
-            );
-          })
-        }
-      </BlockList>
-    </Dropdown>
-  );
-}));
+// stories.add('with BlockList elements', withInfo()(() => {
+//   return (
+//     <Dropdown
+//       arrowIcon={ select('arrowIcon', {
+//         'down': 'down',
+//         'left': 'left',
+//         'none': 'none',
+//         'right': 'right',
+//         'up': 'up',
+//       }, 'down') }
+//       isDisabled={ boolean('isDisabled', false) }
+//       fullWidth={ boolean('fullWidth', false) }
+//       style={ select('style', {
+//         default: 'default',
+//         highlight: 'highlight',
+//         danger: 'danger',
+//         'danger-outline': 'danger-outline',
+//         outline: 'outline',
+//         underline: 'underline'}, '') }
+//       buttonContent='Dropdown'
+//       width={ number('width', 300) }>
+//       <BlockList>
+//         {
+//           data.map((item, index) => {
+//             return (
+//               <BlockList.Category header={ item.header } key={ index }>
+//                 <BlockList.Item onClick={ action('click on complex item') }>
+//                   <div className="flex flex-align--center">
+//                     <div className="flex--1">
+//                       <div>{ item.title }</div>
+//                       <div className="muted micro">{ item.description }</div>
+//                     </div>
+//                   </div>
+//                 </BlockList.Item>
+//               </BlockList.Category>
+//             );
+//           })
+//         }
+//       </BlockList>
+//     </Dropdown>
+//   );
+// }));
 
 
-stories.add('three dots', withInfo()(() => {
-  return (
-    <Dropdown
-      icon={ false }
-      isDisabled={ boolean('isDisabled', false) }
-      fullWidth={ boolean('fullWidth', false) }
-      buttonContent={ <Icon name='ellipsis' /> }
-      width={ number('width', 300) }>
-      <BlockList>
-        {
-          data.map((item, index) => {
-            return (
-              <BlockList.Category header={ item.header } key={ index }>
-                <BlockList.Item onClick={ action('click on complex item') }>
-                  <div className="flex flex-align--center">
-                    <div className="flex--1">
-                      <div>{ item.title }</div>
-                      <div className="muted micro">{ item.description }</div>
-                    </div>
-                  </div>
-                </BlockList.Item>
-              </BlockList.Category>
-            );
-          })
-        }
-      </BlockList>
-    </Dropdown>
-  );
-}));
+// stories.add('three dots', withInfo()(() => {
+//   return (
+//     <Dropdown
+//       icon={ false }
+//       isDisabled={ boolean('isDisabled', false) }
+//       fullWidth={ boolean('fullWidth', false) }
+//       buttonContent={ <Icon name='ellipsis' /> }
+//       width={ number('width', 300) }>
+//       <BlockList>
+//         {
+//           data.map((item, index) => {
+//             return (
+//               <BlockList.Category header={ item.header } key={ index }>
+//                 <BlockList.Item onClick={ action('click on complex item') }>
+//                   <div className="flex flex-align--center">
+//                     <div className="flex--1">
+//                       <div>{ item.title }</div>
+//                       <div className="muted micro">{ item.description }</div>
+//                     </div>
+//                   </div>
+//                 </BlockList.Item>
+//               </BlockList.Category>
+//             );
+//           })
+//         }
+//       </BlockList>
+//     </Dropdown>
+//   );
+// }));
 
 
 stories.add('text behind', withInfo()(() => {
@@ -110,7 +110,6 @@ stories.add('text behind', withInfo()(() => {
         <ScrollContainer>
           <Dropdown
             isDisabled={ boolean('isDisabled', false) }
-            fullWidth={ boolean('fullWidth', false) }
             buttonContent='Dropdown'
             width={ number('width', 300) }>
             <BlockList>
