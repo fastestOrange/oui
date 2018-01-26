@@ -90,11 +90,9 @@ Dropdown.propTypes = {
     */
   arrowIcon: PropTypes.oneOf([
     'down',
-    false,
     'left',
     'none',
     'right',
-    true,
     'up',
   ]),
   /** Button text, can be a string or element. */
